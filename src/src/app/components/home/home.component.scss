@@ -1,0 +1,218 @@
+@import './../../../colors.scss';
+
+.home {
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    background-size: cover;
+    background-position: center;
+
+    .home-content {
+        max-width: 60rem;
+        z-index: 99;
+
+        h1 {
+            position: relative;
+            display: inline-block;
+            font-size: 5.6rem;
+            font-weight: 700;
+            line-height: 1.3;
+
+            span {
+                color: $text-color;
+            }
+        }
+
+        .text-animate {
+            position: relative;
+            width: 32.8rem;
+
+            h3 {
+                font-size: 3.2rem;
+                font-weight: 700;
+                color: transparent;
+                -webkit-text-stroke: .7px $main-color;
+                background-image: linear-gradient($main-color, $main-color);
+                background-repeat: no-repeat;
+                -webkit-background-clip: text;
+                background-position: -33rem 0;
+                animation: homeBgText 6s linear infinite;
+                animation-delay: 2s;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    border-right: 2px solid $main-color;
+                    z-index: -1;
+                    animation: homeCursorText 6s linear infinite;
+                    animation-delay: 2s;
+                }
+            }
+        }
+
+        p {
+            position: relative;
+            font-size: 1.6rem;
+            margin: 2rem 0 4rem;
+        }
+
+        .btn-box {
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            width: 34.5rem;
+            height: 5rem;
+
+            .btn {
+                position: relative;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 15rem;
+                height: 100%;
+                background: $main-color;
+                border: .2rem solid $main-color;
+                border-radius: 0.8rem;
+                font-size: 1.8rem;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                color: $bg-color;
+                z-index: 1;
+                overflow: hidden;
+                transition: .5s;
+
+                &:hover {
+                    color: $main-color;
+
+                    &::before {
+                        width: 100%;
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    background: $bg-color;
+                    z-index: -1;
+                    transition: 0.5s;
+                }
+
+                &:nth-child(2) {
+                    background: transparent;
+                    color: $main-color;
+
+                    &:hover {
+                        color: $bg-color;
+                    }
+
+                    &::before {
+                        background: $main-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .home-sci {
+        position: absolute;
+        bottom: 4rem;
+        width: 170px;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: .2rem solid $main-color;
+            border-radius: 50%;
+            font-size: 20px;
+            color: $main-color;
+            z-index: 1;
+            overflow: hidden;
+            transition: .5s;
+
+            &:hover {
+                color: $bg-color;
+
+                &::before {
+                    width: 100%;
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background: $main-color;
+                z-index: -1;
+                transition: .5s;
+            }
+        }
+    }
+
+    .home-imgHover {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 45%;
+        height: 100%;
+        background: transparent;
+        transition: 3s;
+
+        &:hover {
+            background: $bg-color;
+            opacity: 0.8;
+        }
+    }
+}
+
+@keyframes homeBgText {
+
+    0%,
+    10%,
+    100% {
+        background-position: -33rem 0;
+    }
+
+    65%,
+    85% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes homeCursorText {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    65%,
+    78%,
+    85% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    75%,
+    81% {
+        opacity: 0;
+    }
+}

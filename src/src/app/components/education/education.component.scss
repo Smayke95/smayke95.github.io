@@ -1,0 +1,88 @@
+@import './../../../colors.scss';
+
+.education {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5rem;
+
+    .education-row {
+        display: flex;
+        gap: 15rem;
+
+        .education-column {
+            flex: 1 1 40rem;
+
+            .title {
+                font-size: 2.5rem;
+                margin: 0 0 1.5rem 2rem;
+            }
+
+            .education-box {
+                border-left: .2rem solid $main-color;
+
+                .education-content {
+                    position: relative;
+                    padding-left: 2rem;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: -1.1rem;
+                        width: 2rem;
+                        height: 2rem;
+                        background: $main-color;
+                        border-radius: 50%;
+
+                    }
+
+                    .content {
+                        position: relative;
+                        padding: 1.5rem;
+                        border: .2rem solid $main-color;
+                        border-radius: .6rem;
+                        margin-bottom: 2rem;
+
+                        &:hover::before {
+                            width: 100%;
+                        }
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 0;
+                            height: 100%;
+                            background: $second-bg-color;
+                            z-index: -1;
+                            transition: .5s;
+                        }
+
+                        .year {
+                            font-size: 1.5rem;
+                            color: $main-color;
+                            padding-bottom: .5rem;
+
+                            i {
+                                padding-right: .5rem;
+                            }
+                        }
+
+                        h3 {
+                            font-size: 2rem;
+                        }
+
+                        p {
+                            font-size: 1.6rem;
+                            padding-top: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
