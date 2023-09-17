@@ -103,32 +103,3 @@
         }
     }
 }
-
-.animate {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: $bg-color;
-    z-index: 98;
-}
-
-.animate.home-img {
-    width: 50%;
-}
-
-.logo .animate,
-.navbar .animate,
-#menu-icon .animate,
-.home.show-animate .animate,
-.about.show-animate .animate {
-    animation: showRight 1s ease forwards;
-    animation-delay: calc(.3s * var(--i));
-}
-
-@keyframes showRight {
-    100% {
-        width: 0;
-    }
-}

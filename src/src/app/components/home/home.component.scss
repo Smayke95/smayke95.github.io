@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     padding: 0 9%;
+    background: url('/assets/home.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 
@@ -25,7 +26,7 @@
 
         .text-animate {
             position: relative;
-            width: 32.8rem;
+            width: 40rem;
 
             h3 {
                 font-size: 3.2rem;
@@ -35,7 +36,7 @@
                 background-image: linear-gradient($main-color, $main-color);
                 background-repeat: no-repeat;
                 -webkit-background-clip: text;
-                background-position: -33rem 0;
+                background-position: -40rem 0;
                 animation: homeBgText 6s linear infinite;
                 animation-delay: 2s;
 
@@ -58,66 +59,6 @@
             position: relative;
             font-size: 1.6rem;
             margin: 2rem 0 4rem;
-        }
-
-        .btn-box {
-            position: relative;
-            display: flex;
-            justify-content: space-around;
-            width: 34.5rem;
-            height: 5rem;
-
-            .btn {
-                position: relative;
-                display: inline-flex;
-                justify-content: center;
-                align-items: center;
-                width: 15rem;
-                height: 100%;
-                background: $main-color;
-                border: .2rem solid $main-color;
-                border-radius: 0.8rem;
-                font-size: 1.8rem;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                color: $bg-color;
-                z-index: 1;
-                overflow: hidden;
-                transition: .5s;
-
-                &:hover {
-                    color: $main-color;
-
-                    &::before {
-                        width: 100%;
-                    }
-                }
-
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 0;
-                    height: 100%;
-                    background: $bg-color;
-                    z-index: -1;
-                    transition: 0.5s;
-                }
-
-                &:nth-child(2) {
-                    background: transparent;
-                    color: $main-color;
-
-                    &:hover {
-                        color: $bg-color;
-                    }
-
-                    &::before {
-                        background: $main-color;
-                    }
-                }
-            }
         }
     }
 
@@ -177,7 +118,7 @@
 
         &:hover {
             background: $bg-color;
-            opacity: 0.8;
+            opacity: .4;
         }
     }
 }
@@ -187,7 +128,7 @@
     0%,
     10%,
     100% {
-        background-position: -33rem 0;
+        background-position: -40rem 0;
     }
 
     65%,

@@ -7,31 +7,19 @@
             <h3 class="title">Education</h3>
 
             <div class="education-box">
+                <div *ngFor="let education of educations" class="education-content">
 
-                <div class="education-content">
                     <div class="content">
-                        <div class="year"><i class="bx bxs-calendar"></i> 2017 - 2018</div>
-                        <h3>Master Degree - University</h3>
-                        <p>Faculty of information techonolgies</p>
-                    </div>
-                </div>
+                        <div class="year">
+                            <i class="bx bxs-calendar"></i> {{ education.startDate | date:'MM.yyyy' }} -
+                            {{ education.endDate | date:'MM.yyyy' }}
+                        </div>
 
-                <div class="education-content">
-                    <div class="content">
-                        <div class="year"><i class="bx bxs-calendar"></i> 2017 - 2018</div>
-                        <h3>Master Degree - University</h3>
-                        <p>Faculty of information techonolgies</p>
+                        <h3>{{ education.title }}</h3>
+                        <p>{{ education.schoolName }}</p>
                     </div>
-                </div>
 
-                <div class="education-content">
-                    <div class="content">
-                        <div class="year"><i class="bx bxs-calendar"></i> 2017 - 2018</div>
-                        <h3>Master Degree - University</h3>
-                        <p>Faculty of information techonolgies</p>
-                    </div>
                 </div>
-
             </div>
         </div>
 
@@ -39,31 +27,19 @@
             <h3 class="title">Experience</h3>
 
             <div class="education-box">
+                <div *ngFor="let experience of experiences" class="education-content">
 
-                <div class="education-content">
                     <div class="content">
-                        <div class="year"><i class="bx bxs-calendar"></i> 2017 - 2018</div>
-                        <h3>Team Lead - MAUS</h3>
-                        <p>Faculty of information techonolgies</p>
-                    </div>
-                </div>
+                        <div class="year">
+                            <i class="bx bxs-calendar"></i> {{ experience.startDate | date:'MM.yyyy' }} -
+                            {{ experience.endDate | date:'MM.yyyy' }}
+                        </div>
 
-                <div class="education-content">
-                    <div class="content">
-                        <div class="year"><i class="bx bxs-calendar"></i> 2017 - 2018</div>
-                        <h3>Software developer - MAUS</h3>
-                        <p>Faculty of information techonolgies</p>
+                        <h3>{{ experience.title }}</h3>
+                        <p>{{ experience.companyName }}</p>
                     </div>
-                </div>
 
-                <div class="education-content">
-                    <div class="content">
-                        <div class="year"><i class="bx bxs-calendar"></i> 2017 - 2018</div>
-                        <h3>Software developer - InetDesign</h3>
-                        <p>Faculty of information techonolgies</p>
-                    </div>
                 </div>
-
             </div>
         </div>
 
