@@ -86,3 +86,15 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .education-row {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 462px) {
+    .education {
+        padding: 10rem 4% 5rem 5%;
+    }
+}
