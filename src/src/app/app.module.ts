@@ -8,6 +8,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { EducationComponent } from './components/education/education.component';
 import { HomeComponent } from './components/home/home.component';
+import { TechnologyComponent } from './components/technology/technology.component';
 import { GraphQLModule } from './graphql.module';
 
 @NgModule({
@@ -16,7 +17,8 @@ import { GraphQLModule } from './graphql.module';
     AboutComponent,
     EducationComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    TechnologyComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,14 @@
+.technology-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+
+    div {
+        flex-grow: 1;
+
+        img {
+            padding: 1rem;
+            height: 6rem;
+        }
+    }
+}
