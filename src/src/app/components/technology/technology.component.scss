@@ -10,5 +10,13 @@
             padding: 1rem;
             height: 6rem;
         }
+
+        &:nth-child(3n) {
+            filter: hue-rotate(350deg);
+        }
+
+        &:nth-child(3n - 1) {
+            filter: hue-rotate(10deg);
+        }
     }
 }
