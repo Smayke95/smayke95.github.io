@@ -15,7 +15,6 @@ export class TechnologyComponent {
     private technologyService: TechnologyService) {
 
     technologyService.get().subscribe(result => {
-      console.log(result);
       this.technologies = result;
     })
   }

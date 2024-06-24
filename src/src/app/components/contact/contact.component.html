@@ -1,38 +1,39 @@
 <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span></h2>
 
-    <form action="#">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
 
         <div class="input-box">
 
             <div class="input-field">
-                <input type="text" placeholder="Fullname" required />
+                <input type="text" placeholder="Fullname" formControlName="name" required />
                 <span class="focus"></span>
             </div>
 
             <div class="input-field">
-                <input type="text" placeholder="Email Address" required />
+                <input type="text" placeholder="Email" formControlName="email" required />
                 <span class="focus"></span>
-            </div>                
+            </div>
 
         </div>
 
         <div class="input-box">
 
             <div class="input-field">
-                <input type="number" placeholder="Mobile number" required />
+                <input type="text" placeholder="Mobile" formControlName="mobile" required />
                 <span class="focus"></span>
             </div>
 
             <div class="input-field">
-                <input type="text" placeholder="Email Subject" required />
+                <input type="email" placeholder="Subject" formControlName="subject" required />
                 <span class="focus"></span>
-            </div>                
+            </div>
 
         </div>
 
         <div class="textarea-field">
-            <textarea name="test" id="test" cols="30" rows="10" placeholder="Your message"></textarea>
+            <textarea id="message" cols="30" rows="10" placeholder="Your message" formControlName="message" required>
+            </textarea>
             <span class="focus"></span>
         </div>
 
